@@ -8,7 +8,7 @@
    /* ==============================================
     Fixed menu
     =============================================== */
-    
+
 	$(window).on('scroll', function () {
 		if ($(window).scrollTop() > 50) {
 			$('.header_style_01').addClass('fixed-menu');
@@ -16,12 +16,12 @@
 			$('.header_style_01').removeClass('fixed-menu');
 		}
 	});
-	
-	
+
+
    /* ==============================================
-		Scroll to top  
+		Scroll to top
 	============================================== */
-		
+
 	if ($('#scroll-to-top').length) {
 		var scrollTrigger = 100, // px
 			backToTop = function () {
@@ -47,8 +47,7 @@
     /* ==============================================
        LOADER -->
         =============================================== */
-
-    $(window).load(function() {
+    $(window).on('load', function(){
         $("#preloader").on(500).fadeOut();
         $(".preloader").on(600).fadeOut("slow");
     });
@@ -74,19 +73,19 @@
         $(this).html('0');
         count($(this));
     });
-	
-	
+
+
 	/* ==============================================
      FUN FACTS -->
      =============================================== */
-	
+
 	$(".slider-wrapper").owlCarousel({
         items: 1,
         nav: true,
         dots: false,
         //autoplay: true,
         loop: true,
-        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
         mouseDrag: false,
         touchDrag: false,
         smartSpeed: 700
